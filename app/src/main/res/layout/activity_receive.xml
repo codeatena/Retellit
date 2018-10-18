@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.virtusventures.retellit.ReceiveActivity"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/header_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
+
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/bottom_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true">-->
+    <!--</RelativeLayout>-->
+
+    <ImageButton
+        android:id="@+id/home_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/home"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/home_button"
+        android:src="@drawable/back"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <ImageButton
+        android:id="@+id/order_button"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:src="@drawable/order"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="onOrder"/>
+
+    <ImageView
+        android:id="@+id/refill_imageview"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:src="@drawable/refill"
+        android:layout_above="@+id/order_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <View
+        android:id="@+id/split_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/refill_imageview"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray"
+        />
+
+    <TextView
+        android:id="@+id/name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Softsoap Fresh Citrus \nAntibacterial 11.25 oz"
+        android:layout_below="@+id/split_imageview"
+        android:layout_marginEnd="130dp"
+        android:layout_marginStart="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_textview"
+        android:layout_marginStart="10dp"
+        android:textSize="12sp"
+        android:text="Fresh lemon/lime scent\nNo-clog pump\nDecorative bottle\nKills 99.9% bacteria"/>
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/split_imageview"
+        android:layout_below="@+id/header_imageview"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/left_imageview"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hand_soap"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentBottom="true"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reviews:"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginStart="10dp"/>
+
+        <hyogeun.github.com.colorratingbarlib.ColorRatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating="5"
+            app:empty_color="#94979d"
+            app:progress_color="#52c8f4"
+            android:layout_alignParentBottom="true"
+            android:scaleY="0.5"
+            android:scaleX="0.5"
+            android:layout_marginStart="-50dp"
+            android:layout_marginBottom="-10dp" />
+
+        <TextView
+            android:id="@+id/price_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/description_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/left_imageview"
+            android:layout_marginStart="10dp"
+            android:text="Softsoap \n Antibacteria Liquid Hand Soap is clinically proven to eliminate 99.9% of bacteria. Is unique formula, with moisturizers ,leaves your skin feeling soft and protected."
+            android:layout_above="@+id/price_textview"
+            android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/alert_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:visibility="invisible">
+
+        <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/white"
+            android:padding="20dp"
+            app:corner_radius="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/thank_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THANK YOU \n FOR YOUR \n ORDER!"
+                android:textAlignment="center"
+                android:textColor="#52c8f4"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thank_textview"
+                android:text="Order set for\n free 2 day\n home delivery"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"/>
+
+        </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/background_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/header_imageview" />
+</RelativeLayout>
