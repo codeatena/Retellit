@@ -115,7 +115,7 @@ public class ReceiveActivity extends ConnectionsActivity {
     {
         super.onResume();
         Bundle extras = getIntent().getExtras();
-        if (extras != null)
+        if (getIntent().hasExtra("product"))
         {
             String productStr = extras.getString("product");
             Log.d(TAG, productStr);
@@ -123,7 +123,7 @@ public class ReceiveActivity extends ConnectionsActivity {
             Gson gson = new Gson();
             ProductModel productModel = gson.fromJson(productStr, ProductModel.class);
             setProduct(productModel);
-            
+
         }
     }
 
