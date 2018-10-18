@@ -123,6 +123,7 @@ public class ReceiveActivity extends ConnectionsActivity {
             Gson gson = new Gson();
             ProductModel productModel = gson.fromJson(productStr, ProductModel.class);
             setProduct(productModel);
+            
         }
     }
 
