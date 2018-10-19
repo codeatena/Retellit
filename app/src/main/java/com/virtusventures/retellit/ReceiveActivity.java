@@ -281,6 +281,8 @@ public class ReceiveActivity extends ConnectionsActivity {
             if (Foreground.get().isForeground()) {
                 setProduct(productModel);
             }else{
+                setProduct(productModel);
+                //getIntent().putExtra("product" ,productStr);
                 showNotiifcation(productStr);
             }
         }
